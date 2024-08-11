@@ -1,5 +1,5 @@
 import React from 'react'
-import Items from '../assets/Item'
+import { Items } from '../assets/Item'
 
 export default function MenuItem() {
   return (

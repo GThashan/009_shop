@@ -23,4 +23,5 @@ const Rice =[
 
 ]
 
+
 export {Items, Rice}

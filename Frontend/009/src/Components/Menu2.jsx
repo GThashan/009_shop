@@ -1,6 +1,7 @@
 import React from 'react'
 import { Rice } from '../assets/Item'
 
+
 export default function Menu2() {
   return (
     <div className='px-8 py-8 mt-10'>

@@ -12,7 +12,7 @@ export default function Navbar() {
       <ul className='flex font-bold gap-4 text-[20px] uppercase'>
         <li className='cursor-pointer hover:underline'> <Link to='/'>Home</Link></li>
         <li className='cursor-pointer hover:underline'><Link to='/menu'>Menu</Link></li>
-        <li className='cursor-pointer hover:underline'>About Us</li>
+        <li className='cursor-pointer hover:underline'><Link to='/about'>About Us</Link></li>
         <li className='cursor-pointer hover:underline'>Blog</li>
         <li className='cursor-pointer hover:underline'>Contact Us</li>
       </ul>

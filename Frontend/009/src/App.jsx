@@ -6,6 +6,8 @@ import Login from './Pages/Login'
 import Menu from './Pages/Menu'
 import Select from './Pages/Select'
 import About from './Pages/About'
+import OwnerLogin from './Admin/OwnerLogin'
+import Dashboard from './Admin/Dashboard'
 function App() {
 
   
@@ -20,6 +22,8 @@ function App() {
       <Route path='/menu' element={<Menu/>}/>
       <Route path='/select' element={<Select/>}/>
       <Route path='/about' element={<About/>}/>
+      <Route path='/admin' element={<OwnerLogin/>}/>
+      <Route path='/dashboard' element={<Dashboard/>}/>
      </Routes>
      </BrowserRouter>
     </>

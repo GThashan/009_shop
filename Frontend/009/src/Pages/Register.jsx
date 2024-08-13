@@ -7,7 +7,7 @@ export default function Register() {
   return (
     <div>
       <Navbar/>
-      <div className='w-[500px] p-10  border-1 shadow-md mx-auto  my-5'>
+      <div className='max-w-[500px] p-10  border-1 shadow-md mx-auto  my-5'>
         <h1 className='text-center font-bold text-[40px] text-slate-800 uppercase'>Register</h1>
         <form action="" className='flex flex-col mx-auto  justify-center'>
             <label htmlFor="" className='my-3 text-[18px] font-semibold'>Enter Username</label>

@@ -14,7 +14,7 @@ export default function Footer() {
           How do you like to eat? We always Serve the best
         </h1>
       </div>
-      <div className="grid grid-cols-4 px-8 py-8 bg-slate-900 text-white">
+      <div className="lg:grid grid-cols-4 px-8 py-8 bg-slate-900 text-white">
         <div>
           <h1 className="font-bold my-5">Contact</h1>
           <ul>

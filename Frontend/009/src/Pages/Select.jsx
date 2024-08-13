@@ -50,7 +50,7 @@ export default function Select() {
           Dive into a culinary adventure with our fusion submarine! Stacked with the freshest ingredients and bursting with flavors, every bite takes you on a journey beneath layers of deliciousness. Get ready to submerge your cravings!
         </p>
 
-        <div className='grid grid-cols-3 mx-auto gap-4'>
+        <div className='lg:grid grid-cols-3 mx-auto gap-4'>
           {Rice.map((rice, index) => (
             <div key={index} className='shadow uppercase font-bold cursor-pointer p-4'>
               <img src={rice.url} alt="" className='w-full' />

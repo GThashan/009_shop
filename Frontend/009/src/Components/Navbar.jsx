@@ -24,6 +24,7 @@ export default function Navbar() {
           aria-expanded={isNavOpen}
         >
           <span className="sr-only">Open main menu</span>
+          
           <svg 
             className="w-5 h-5 text-black" 
             aria-hidden="true" 

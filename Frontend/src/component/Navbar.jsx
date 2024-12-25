@@ -12,7 +12,7 @@ export default function Navbar() {
             <li className='hover:underline cursor-pointer'>Contact</li>
         </ul>
       </nav>
-      <button className='bg-[#F58D38] text-white font-medium px-3 py-1 rounded-full hover:bg-[#DFBD20] cursor-pointer'>Support</button>
+      <button className='bg-[#F58D38] text-white font-medium px-3 py-1 rounded-full hover:bg-[#DFBD20] cursor-pointer hover:scale-105 transition-transform'>Support</button>
     </div>
   )
 }

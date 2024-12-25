@@ -6,7 +6,7 @@ import Menu from '../component/Menu'
 export default function Home() {
   return (
     <>
-    <div className='bg-fixed'>
+    <div className="bg-[url('https://wallpapercave.com/wp/wp9506465.jpg')] bg-no-repeat bg-cover shadow-b-lg">
       <Navbar/>
       <Header/>
     

@@ -1,14 +1,17 @@
-
-
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import './App.css';
+import Home from './pages/Home'
 function App() {
  
 
   return (
-    <div className="bg-red-400">
-     <h1 className="text-3xl font-bold underline text-center">
-      Hello world!
-    </h1>
-    </div>
+    <div className="font-sans">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
   )
 }
 

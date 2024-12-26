@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../component/Navbar'
 import Header from '../component/Header'
 import Menu from '../component/Menu'
+import Service from '../component/Service'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     </div>
     <div>
         <Menu/>
+        <Service/>
     </div>
     </>
   )

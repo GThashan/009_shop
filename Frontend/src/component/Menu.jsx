@@ -5,12 +5,12 @@ import leaf1 from "../assets/leaf1.png";
 export default function Menu() {
   return (
     <div className="mt-[50px] flex flex-col items-center justify-center">
-      <h1 className="text-center text-[50px] text-white font-extrabold">
+      <h1 className="text-center text-[50px] text-white font-extrabold slide-in-up">
         Choose Our Menu
       </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 px-10 mt-6 gap-4 ietms-center">
-        <div className="relative max-w-[200px]  bg-[#333333] flex flex-col items-center justify-center p-4 rounded shadow-lg cursor-pointer hover:scale-105 transition-transform">
+      <div className="grid grid-cols-2 md:grid-cols-4 px-10 mt-6 gap-8 ietms-center">
+        <div className="fade-in-left relative max-w-[200px]  bg-[#333333] flex flex-col items-center justify-center p-4 rounded shadow-lg cursor-pointer hover:scale-105 transition-transform">
           <img src={leaf1} alt="" className="absolute  top-[-30px] left-[-30px] w-[900px]" />
           <img
             src={manuitem}

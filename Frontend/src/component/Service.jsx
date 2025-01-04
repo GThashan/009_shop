@@ -7,7 +7,7 @@ export default function Service() {
     ">
     <div className=" md:max-w-[800px] px-10 text-white ">
      <div>
-        <h1 className='text-center text-[70px]'>We have a services that can satisfy you</h1>
+        <h1 className='text-center text-[50px]'>We have a services that can satisfy you</h1>
         <p className='text-center'>Our restaurant has good service to make our customers more comfortable to come back again. Our goal is to create some healthy and fresh food for you to enjoy. We are looking forward to having you visit our restaurant</p>
      </div>
      <div className='flex flex-row items-center justify-center my-10 gap-4 '>

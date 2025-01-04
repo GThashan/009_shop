@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss-animate");
 export default {
   content: [
     "./index.html",
@@ -7,13 +8,23 @@ export default {
   theme: {
     extend: {
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
+        'fade-in-left': 'fadeInLeft 1s ease-out',
+        'slide-in-up': 'slideInUp 1s ease-out',
+      },
+      keyframes: {
+        fadeInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       fontFamily: {
-        sans: ['Playfair Display', 'sans-serif'], 
+        sans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
     },
   },
-  plugins: [],
-}
-
+  plugins: [plugin],
+};

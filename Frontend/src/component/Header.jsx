@@ -4,29 +4,23 @@ import chef from "../assets/chef.png";
 import side from "../assets/side-4.png";
 import side2 from "../assets/side-3.png";
 
-
-
 export default function Header() {
   return (
-<div className="relative flex flex-col items-center justify-center ">
-<img src={side} alt="" className="w-[100px] md:w-[250px] absolute  left-0 bottom-0" />
-<img src={side2} alt="" className="w-[200px] md:w-[350px] absolute   right-0 bottom-0" />
+    <div className="flex flex-col items-center justify-center bg-[url('https://wallpapercave.com/wp/wp9506465.jpg')] bg-no-repeat bg-cover shadow-b-lg">
+    
 
-
-      <div className="text-white flex flex-col items-center justify-center   px-10  md:max-w-[800px]">
-        <h1 className="text-[40px] text-center font-extrabold md:text-[70px]">Fresh and Healthy Food</h1>
-        <img src={chef} alt="" className="w-[100px]"/>
-     
-        <p className="text-center font-thin">
-          Variety of fresh and fresh food served just for you, your solution
-          when hungry in full day with super fast delivery
-          
-        </p>
-        
+      <div className="absolute z-10   text-white flex flex-col items-center justify-center  px-8    md:max-w-[800px]">
+        <div className=" flex flex-col items-center justify-start">
+          <img src={chef} alt="" className="w-[100px] " />
+          <h1 className="bg-gradient-to-r from-[#F58D38] to-white inline-block text-transparent bg-clip-text  text-[40px] md:text-[60px] font-extrabold text-center">
+            WHERE EVERY BITE IS A MOMENT OF DELIGHT
+          </h1>
+          <button className='bg-[#F58D38] text-white font-medium px-4 py-2 rounded-full hover:bg-[#DFBD20] cursor-pointer hover:scale-105 transition-transform mt-10'>Order Now</button>
+        </div>
       </div>
 
       <div className="">
-        <img src={mainimg} alt="" className="md:w-[1000px]" />
+        <img src={mainimg} alt="" className="md:w-[500px] opacity-25  mt-0" />
       </div>
     </div>
   );

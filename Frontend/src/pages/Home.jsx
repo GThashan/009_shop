@@ -3,11 +3,12 @@ import Navbar from '../component/Navbar'
 import Header from '../component/Header'
 import Menu from '../component/Menu'
 import Service from '../component/Service'
+// import Blog from '../component/Blog'
 
 export default function Home() {
   return (
     <>
-    <div className="bg-[url('https://wallpapercave.com/wp/wp9506465.jpg')] bg-no-repeat bg-cover shadow-b-lg">
+    <div className="relative">
       <Navbar/>
       <Header/>
     
@@ -15,6 +16,7 @@ export default function Home() {
     <div>
         <Menu/>
         <Service/>
+        {/* <Blog/> */}
     </div>
     </>
   )

@@ -22,7 +22,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+        sans: ['"Playfair Display"', 'Arial', 'sans-serif'],
       },
     },
   },

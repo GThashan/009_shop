@@ -13,7 +13,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="text-white flex flex-row justify-between items-center px-5 border-b border-b-1 mb-8">
+    <div className="text-[#1E1E1E] flex flex-row justify-between items-center px-5 border-b border-b-1 ">
    
       <img src={logo} alt="Logo" className="w-[80px]" />
 

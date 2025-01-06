@@ -3,14 +3,16 @@ import Navbar from '../component/Navbar'
 import Header from '../component/Header'
 import Menu from '../component/Menu'
 import Service from '../component/Service'
+import About from '../component/About'
 // import Blog from '../component/Blog'
 
 export default function Home() {
   return (
     <>
-    <div className="relative">
+    <div>
       <Navbar/>
       <Header/>
+      <About/>
     
     </div>
     <div>

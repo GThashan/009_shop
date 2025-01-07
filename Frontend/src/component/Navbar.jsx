@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import logo from "../assets/logo1.png";
-import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaShoppingCart, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 
-
-
-
-export default function Navbar() {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,49 +10,64 @@ export default function Navbar() {
   };
 
   return (
-    <div className="text-[#1E1E1E] flex flex-row justify-between items-center px-5 border-b border-b-1 ">
-   
-      <img src={logo} alt="Logo" className="w-[80px]" />
-
-     
-      <nav
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } text-right md:block absolute md:static top-16 left-0 w-full md:w-auto bg-[#121617] md:bg-transparent shadow-md md:shadow-none`}
-      >
-        <ul className="flex flex-col md:flex-row md:items-center md:gap-5 p-4 md:p-0">
-          <li className="hover:underline cursor-pointer py-2 md:py-0 font-bold">Home</li>
-          <li className="hover:underline cursor-pointer py-2 md:py-0 font-bold">Menu</li>
-          <li className="hover:underline cursor-pointer py-2 md:py-0 font-bold">About Us</li>
-          <li className="hover:underline cursor-pointer py-2 md:py-0 font-bold">Blog</li>
-          <li className="hover:underline cursor-pointer py-2 md:py-0 font-bold">Contact</li>
-          <li className="hover:underline cursor-pointer py-2 md:py-0 font-bold">My Account</li>
-        </ul>
-      </nav>
-
-     
-      <div className="flex flex-row items-center gap-3">
-    
-        <FaShoppingCart
-          className="text-[20px] cursor-pointer hover:text-[#F58D38]"
-          title="Cart"
-        />
+    <div className="relative bg-white">
+      <div className="text-gray-900 flex justify-between items-center px-5 py-4 border-b">
       
-   
-            <FaSearch
-            className="text-[20px] cursor-pointer hover:text-[#F58D38]"
-            title="Search" 
+        <Link to="/">
+          <div className="w-20">
+           
+            <div className="h-8 w-20 bg-gray-200 rounded" />
+          </div>
+        </Link>
+
+        
+        <nav className={`
+          ${isMenuOpen ? 'flex' : 'hidden'}
+          md:flex
+          absolute md:relative
+          top-full left-0
+          w-full md:w-auto
+          flex-col md:flex-row
+          bg-white md:bg-transparent
+          shadow-lg md:shadow-none
+          z-50
+        `}>
+          <ul className="flex flex-col md:flex-row md:items-center md:gap-8 p-4 md:p-0">
+            {['Home', 'Menu', 'About Us', 'Contact', 'My Account'].map((item) => (
+              <li key={item} className="py-2 md:py-0">
+                <Link
+                  to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                  className="font-bold hover:text-orange-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+       
+        <div className="flex items-center gap-6">
+          <FaShoppingCart 
+            className="text-xl cursor-pointer hover:text-orange-500 transition-colors"
+            title="Cart"
           />
-        
-        
-    
-        <div
-          className="text-[20px] cursor-pointer hover:text-[#F58D38] md:hidden"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
+          <FaSearch 
+            className="text-xl cursor-pointer hover:text-orange-500 transition-colors"
+            title="Search"
+          />
+          <button
+            className="text-xl md:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;

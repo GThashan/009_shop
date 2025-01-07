@@ -4,6 +4,7 @@ import Header from '../component/Header'
 import Menu from '../component/Menu'
 import Service from '../component/Service'
 import About from '../component/About'
+import Footer from '../component/Footer'
 // import Blog from '../component/Blog'
 
 export default function Home() {
@@ -16,9 +17,10 @@ export default function Home() {
     
     </div>
     <div>
-        <Menu/>
+        
         <Service/>
-        {/* <Blog/> */}
+        <Menu/>
+        <Footer/>
     </div>
     </>
   )

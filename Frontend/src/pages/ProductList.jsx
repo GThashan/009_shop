@@ -12,10 +12,10 @@ export default function ProductList() {
           return (
             <div
               key={index}
-              className="bg-[#333333] flex flex-col items-center justify-center text-white p-2 relative rounded cursor-pointer"
+              className="bg-white flex flex-col items-center justify-center border-2 border-[#FF7D05] hover:scale-105 transition-transform mt-3 p-2 relative rounded cursor-pointer"
             >
               <img src={leaf1}  className="absolute w-[80px] top-3 left-0"/>
-              <h3>{product.title}</h3>
+              <h3 className="text-black">{product.title}</h3>
               <img src={product.img} alt={product.title} />
               <p>{product.info}</p>
               <div className="flex flex-row items-center justify-between w-full">

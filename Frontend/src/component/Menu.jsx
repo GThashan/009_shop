@@ -1,89 +1,70 @@
 import React from "react";
-import manuitem from "../assets/main.png";
-import leaf1 from "../assets/leaf1.png";
+import rice from "../assets/rice.png";
+import Juice from "../assets/juice1.png";
+import bun from "../assets/bun.png";
+import {  FaSearch } from 'react-icons/fa';
+
+const category = [
+  {
+    img:Juice,
+    name:"Drinks"
+  },
+  {
+    img:rice,
+    name:"Rice & Pizza"
+  },
+  {
+    img:bun,
+    name:"Tea & Bun"
+  },
+]
 
 export default function Menu() {
   return (
-    <div className="mt-[50px] flex flex-col items-center justify-center">
-      <h1 className="text-center text-[30px] font-bold slide-in-up">
-        Choose Our Menu
+    <div className="bg-[url('https://i.etsystatic.com/18975710/r/il/07267a/2234476041/il_300x300.2234476041_lnrv.jpg')] bg-no-repeat bg-cover  flex flex-col items-center justify-center py-8">
+      <h1 className="text-center text-[20px] font-bold slide-in-up text-white">
+        Select Category
       </h1>
+      <div className="w-full flex items-center justify-center my-4">
+        <div className="md:w-1/2 flex items-center justify-center gap-4 bg-white px-3 rounded-lg">
+        <FaSearch
+            className="text-md cursor-pointer hover:text-orange-500 transition-colors"
+            title="Cart"
+          />
+      <input type="text" placeholder="Seach category" 
+      className="py-2 px-1 w-full outline-none "
+      />
+        </div>
+     
+      </div>
+      
 
       <div className="grid grid-cols-1 md:grid-cols-3  mt-6 gap-8 items-center">
-        <div className="p-5 fade-in-left relative   bg-white flex flex-col items-center justify-center p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform">
-          <img src={leaf1} alt="" className="absolute  top-[-30px] left-[-30px] w-[900px]" />
-          <img
-            src={manuitem}
-            alt="Delicious medium beef and chili dish"
-            className="w-[200px]  rounded-md  relative"
-          />
 
-          <p className=" text-[20px] text-center">
-            Medium Beef and Chili Soft
-          </p>
-          <ul>
-            <li>4 piece chicken</li>
-            <li>4 piece chicken</li>
-            <li>Rs.300/=</li>
-          </ul>
-
-          <div className="flex items-center justify-center w-full">
-        
-           <button className="px-3 py-2 w-full bg-[#FF7D05] text-white">View</button>
+        {category.map((item,index)=>{
+          return(
+            <div key={index} className="border p-5 fade-in-left relative   bg-black flex flex-col items-center justify-center p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform">
+            <p className=" text-[20px] text-center text-white">
+              {item.name}
+            </p>
+            <img
+              src={item.img}
+              alt="Delicious medium beef and chili dish"
+              className="w-[200px] max-h-[200px]  rounded-md"
+            />
+  
+            
+          
+            <div className="flex items-center justify-center w-full">
+          
+             <button className="px-3 py-2 w-full bg-[#FF7D05] text-white">View</button>
+            </div>
           </div>
-        </div>
+          )
+        })}
        
-        <div className="p-5 fade-in-left relative   bg-white flex flex-col items-center justify-center p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform">
-          <img src={leaf1} alt="" className="absolute  top-[-30px] left-[-30px] w-[900px]" />
-          <img
-            src={manuitem}
-            alt="Delicious medium beef and chili dish"
-            className="w-[200px]  rounded-md  relative"
-          />
-
-          <p className=" text-[20px] text-center">
-            Medium Beef and Chili Soft
-          </p>
-          <ul>
-            <li>4 piece chicken</li>
-            <li>4 piece chicken</li>
-            <li>Rs.300/=</li>
-          </ul>
-
-          <div className="flex items-center justify-center w-full">
-        
-           <button className="px-3 py-2 w-full bg-[#FF7D05] text-white">View</button>
-          </div>
-        </div>
-       
-        <div className="p-5 fade-in-left relative   bg-white flex flex-col items-center justify-center p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform">
-          <img src={leaf1} alt="" className="absolute  top-[-30px] left-[-30px] w-[900px]" />
-          <img
-            src={manuitem}
-            alt="Delicious medium beef and chili dish"
-            className="w-[200px]  rounded-md  relative"
-          />
-
-          <p className=" text-[20px] text-center">
-            Medium Beef and Chili Soft
-          </p>
-          <ul>
-            <li>4 piece chicken</li>
-            <li>4 piece chicken</li>
-            <li>Rs.300/=</li>
-          </ul>
-
-          <div className="flex items-center justify-center w-full">
-        
-           <button className="px-3 py-2 w-full bg-[#FF7D05] text-white">View</button>
-          </div>
-        </div>
-       
-       
-       
-       
-      </div>
-      <button className='bg-[#F58D38] text-white font-medium px-3 py-2 rounded-full hover:bg-[#DFBD20] cursor-pointer my-10 hover:scale-105 transition-transform'>Find More</button>
-    </div>
+     </div>
+     </div>  
+    
   );
 }

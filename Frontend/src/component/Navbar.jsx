@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
+import { FaShoppingCart, FaSearch, FaBars, FaTimes, FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
           z-50
         `}>
           <ul className="flex flex-col md:flex-row md:items-center md:gap-8 p-4 md:p-0">
-            {['Home', 'Menu', 'About Us', 'Contact', 'My Account'].map((item) => (
+            {['Home', 'Menu'].map((item) => (
               <li key={item} className="py-2 md:py-0">
                 <Link
                   to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
@@ -49,14 +49,16 @@ const Navbar = () => {
 
        
         <div className="flex items-center gap-6">
+          <Link 
+          to="/card"
+          >
           <FaShoppingCart 
             className="text-xl cursor-pointer hover:text-orange-500 transition-colors"
             title="Cart"
           />
-          <FaSearch 
-            className="text-xl cursor-pointer hover:text-orange-500 transition-colors"
-            title="Search"
-          />
+          </Link>
+         
+         
           <button
             className="text-xl md:hidden"
             onClick={toggleMenu}

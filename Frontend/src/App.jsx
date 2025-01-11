@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import Card from './pages/Card';
 import Login from './pages/Login';
+import MainMenu from './pages/MainMenu';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Menu" element={<ProductList />} />
             <Route path="/card" element={<Card />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/select" element={<MainMenu/>}/>
           </Routes>
         </BrowserRouter>
       </div>
